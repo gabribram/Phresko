@@ -1,0 +1,86 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gabri.phresko.fragments.RootFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E5E5E5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorAccent"
+            android:id="@+id/top">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/logo"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imageView2"
+                android:scaleType="fitCenter" />
+        </RelativeLayout>
+
+        <Button
+            android:text="Choose One"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/top"
+            android:layout_marginTop="21dp"
+            android:id="@+id/button3"
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/button3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/middle"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/sko"
+                android:id="@+id/sko_imageButton"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:background="@drawable/skobackground"
+                android:layout_margin="2dp" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/slides"
+                android:id="@+id/slides_imageButton"
+                android:layout_weight="1"
+                android:background="@drawable/slidebackground"
+                android:scaleType="centerInside"
+                android:layout_margin="2dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:text="next"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/nextbutton_bg"
+            android:layout_below="@+id/middle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="43dp"
+            android:id="@+id/next_button"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</FrameLayout>

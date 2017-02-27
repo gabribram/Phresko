@@ -1,0 +1,55 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gabri.phresko.fragments.SelectImagesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="38dp"
+                android:id="@+id/tagname_button" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tagname_button"
+                android:layout_toLeftOf="@+id/tagname_button"
+                android:layout_toStartOf="@+id/tagname_button"
+                android:layout_marginTop="33dp"
+                android:id="@+id/button4" />
+
+            <Button
+                android:text="#"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button5"
+                android:layout_alignBaseline="@+id/button4"
+                android:layout_alignBottom="@+id/button4"
+                android:layout_toRightOf="@+id/tagname_button"
+                android:layout_toEndOf="@+id/tagname_button" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>
