@@ -76,6 +76,40 @@ public class MainTagAdapter extends BaseAdapter {
             viewHolder.background_layout.setBackgroundColor(Color.parseColor("#BF5E27"));
             viewHolder.tagarrow_imageview.setBackgroundColor(Color.parseColor("#AC5523"));
         }
+        if (favelist.get(position).getTagname().equals("Sko of the Day")){
+        viewHolder.tagimageview.setImageResource(R.drawable.skooftheday);
+        }
+        if (favelist.get(position).getTagname().equals("Savagery")){
+            viewHolder.tagimageview.setImageResource(R.drawable.savagery);
+        }
+        if (favelist.get(position).getTagname().equals("Politics")){
+            viewHolder.tagimageview.setImageResource(R.drawable.politics);
+        }
+        if (favelist.get(position).getTagname().equals("Sports")){
+            viewHolder.tagimageview.setImageResource(R.drawable.sport);
+        }
+        if (favelist.get(position).getTagname().equals("Pop Media")){
+            viewHolder.tagimageview.setImageResource(R.drawable.popmedia);
+        }
+        if (favelist.get(position).getTagname().equals("People")){
+            viewHolder.tagimageview.setImageResource(R.drawable.people);
+        }
+        if (favelist.get(position).getTagname().equals("Places")){
+            viewHolder.tagimageview.setImageResource(R.drawable.places);
+        }
+        if (favelist.get(position).getTagname().equals("Events")){
+            viewHolder.tagimageview.setImageResource(R.drawable.events);
+        }
+        if (favelist.get(position).getTagname().equals("Things")){
+            viewHolder.tagimageview.setImageResource(R.drawable.things);
+        }
+        if (favelist.get(position).getTagname().equals("Art Images")){
+            viewHolder.tagimageview.setImageResource(R.drawable.artimages);
+        }
+//        if (favelist.get(position).getTagname().equals("PETTY")){
+//            viewHolder.tagimageview.setImageResource(R.drawable.);
+//        }
+
 
         return view;
     }

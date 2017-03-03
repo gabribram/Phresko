@@ -24,32 +24,41 @@
 
             <Button
                 android:text="Button"
+                android:padding="5dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="38dp"
-                android:id="@+id/tagname_button" />
+                android:id="@+id/tagname_button"
+                android:textColor="@android:color/white" />
 
-            <Button
-                android:text="Button"
+            <ImageButton
+
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:src="@drawable/all"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:background="@color/colorAccent"
                 android:layout_below="@+id/tagname_button"
                 android:layout_toLeftOf="@+id/tagname_button"
                 android:layout_toStartOf="@+id/tagname_button"
                 android:layout_marginTop="33dp"
-                android:id="@+id/button4" />
+                android:id="@+id/all_button"
+                 />
 
-            <Button
-                android:text="#"
+            <ImageButton
+                android:src="@drawable/hash"
+                android:scaleType="centerInside"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/button5"
-                android:layout_alignBaseline="@+id/button4"
-                android:layout_alignBottom="@+id/button4"
+                android:layout_height="40dp"
+                android:background="@color/colorAccent"
+                android:id="@+id/hash_button"
+                android:layout_alignBaseline="@+id/all_button"
+                android:layout_alignBottom="@+id/all_button"
                 android:layout_toRightOf="@+id/tagname_button"
-                android:layout_toEndOf="@+id/tagname_button" />
+                android:layout_toEndOf="@+id/tagname_button"
+                />
         </RelativeLayout>
     </LinearLayout>
 </FrameLayout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="390dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F2F2F2">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/profiletemp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:id="@+id/profile_imageView" />
+
+        <TextView
+            android:text="JOHN DEO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/profile_imageView"
+            android:layout_toEndOf="@+id/profile_imageView"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:id="@+id/username_textView" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/posttime"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/imageView5" />
+
+        <TextView
+            android:text="3:00 PM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView5"
+            android:layout_toStartOf="@+id/imageView5"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp"
+            android:id="@+id/posttime_textView"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/imagesample"
+            android:id="@+id/photo_imageView" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/image_bg"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView7"
+            android:scaleType="center" />
+
+        <TextView
+            android:text="Evil Jesus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/title_textView"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:text="Lorem lpsum is simply summy test of the printin and pyresetting industry.Lorem lpsm is simply dummy text."
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/description_textView" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            app:srcCompat="@drawable/location"
+            android:id="@+id/imageView8"
+            android:layout_centerVertical="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:text="MI,USA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageView8"
+            android:layout_toEndOf="@+id/imageView8"
+            android:id="@+id/location_textView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:srcCompat="@drawable/dot"
+            android:layout_toRightOf="@+id/location_textView"
+            android:layout_toEndOf="@+id/location_textView"
+            android:layout_centerVertical="true"
+            android:id="@+id/imageView9" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageView9"
+            android:layout_toEndOf="@+id/imageView9"
+            android:text="love"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/default_textview" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:text="#fun"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/firsttag_textview"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="#BF5E27"
+            android:padding="5dp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:text="#jokes"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/firsttag_textview"
+            android:layout_toEndOf="@+id/firsttag_textview"
+            android:id="@+id/secode_textview"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="#AEB4C0"
+            android:padding="5dp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:text="#kidding"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/secode_textview"
+            android:layout_toEndOf="@+id/secode_textview"
+            android:id="@+id/thirdtag_textview"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="#AEB4C0"
+            android:padding="5dp"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/replay"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/imageView10" />
+
+        <TextView
+            android:text="101"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView10"
+            android:layout_toStartOf="@+id/imageView10"
+            android:id="@+id/favcount_textView"
+            android:layout_marginRight="10dp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/favoerite"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/favcount_textView"
+            android:layout_toStartOf="@+id/favcount_textView"
+            android:id="@+id/favorites_imageView" />
+
+        <TextView
+            android:text="12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/favorites_imageView"
+            android:layout_toStartOf="@+id/favorites_imageView"
+            android:id="@+id/commentcount_textView"
+            android:layout_marginRight="10dp" />
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            app:srcCompat="@drawable/comment"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/commentcount_textView"
+            android:layout_toStartOf="@+id/commentcount_textView"
+            android:id="@+id/comment_imageButton"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+</LinearLayout>

@@ -65,28 +65,63 @@ public class MainTagFragment extends Fragment {
     }
 public void load_tag(){
 
-    favelist=new ArrayList<Favorites>();
+    if (Utils.getFromPref(Constants.KEY_TAG_KIND,getActivity()).equals("sko")){
+        favelist=new ArrayList<Favorites>();
+
+        Favorites favorites6=new Favorites();
+        favorites6.setTagname("Sko of the Day");
+        favelist.add(favorites6);
+        Favorites favorites=new Favorites();
+        favorites.setTagname("Savagery");
+        favelist.add(favorites);
+        Favorites favorites1=new Favorites();
+        favorites1.setTagname("Politics");
+        favelist.add(favorites1);
+        Favorites favorites2=new Favorites();
+        favorites2.setTagname("Sports");
+        favelist.add(favorites2);
+        Favorites favorites3=new Favorites();
+        favorites3.setTagname("Pop Media");
+        favelist.add(favorites3);
+        Favorites favorites4=new Favorites();
+        favorites4.setTagname("PETTY");
+        favelist.add(favorites4);
+        Favorites favorites5=new Favorites();
+        favorites5.setTagname("ADULT");
+        favelist.add(favorites5);
 
 
-    Favorites favorites=new Favorites();
-    favorites.setTagname("SPORTS");
-    favelist.add(favorites);
-    Favorites favorites1=new Favorites();
-    favorites1.setTagname("POLITICS");
-    favelist.add(favorites1);
-    Favorites favorites2=new Favorites();
-    favorites2.setTagname("SAVAGERY");
-    favelist.add(favorites2);
-    Favorites favorites3=new Favorites();
-    favorites3.setTagname("POLITICS");
-    favelist.add(favorites3);
-    Favorites favorites4=new Favorites();
-    favorites4.setTagname("POPMEDIA");
-    favelist.add(favorites4);
+        adapter = new MainTagAdapter(getActivity(), favelist);
+        tag_listview.setAdapter(adapter);
+    }
+    else if (Utils.getFromPref(Constants.KEY_TAG_KIND,getActivity()).equals("slide")){
 
 
-    adapter = new MainTagAdapter(getActivity(), favelist);
-    tag_listview.setAdapter(adapter);
+        favelist=new ArrayList<Favorites>();
+
+
+        Favorites favorites=new Favorites();
+        favorites.setTagname("People");
+        favelist.add(favorites);
+        Favorites favorites1=new Favorites();
+        favorites1.setTagname("Places");
+        favelist.add(favorites1);
+        Favorites favorites2=new Favorites();
+        favorites2.setTagname("Events");
+        favelist.add(favorites2);
+        Favorites favorites3=new Favorites();
+        favorites3.setTagname("Things");
+        favelist.add(favorites3);
+        Favorites favorites4=new Favorites();
+        favorites4.setTagname("Art Images");
+        favelist.add(favorites4);
+
+
+        adapter = new MainTagAdapter(getActivity(), favelist);
+        tag_listview.setAdapter(adapter);
+
+    }
+
 
 }
 }

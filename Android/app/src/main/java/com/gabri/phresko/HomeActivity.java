@@ -7,11 +7,14 @@ import android.os.Bundle;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
+import com.gabri.phresko.fragments.HomeFragment;
+import com.gabri.phresko.fragments.PostFragment;
+import com.gabri.phresko.fragments.ProfileFragment;
 import com.gabri.phresko.fragments.RootFragment;
 
 public class HomeActivity extends AppCompatActivity {
     AHBottomNavigation bottomNavigation;
-    RootFragment rootFragment;
+    HomeFragment rootFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +60,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
 //        bottomNavigation.setNotification("", 1);
-        if (rootFragment==null)rootFragment=new RootFragment();
+        if (rootFragment==null)rootFragment=new HomeFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.contentContainer, rootFragment).commit();
 
 
@@ -75,8 +78,14 @@ public class HomeActivity extends AppCompatActivity {
                 }
                 else if (position == 1) {
 
-                    Intent intent=new Intent(HomeActivity.this,ProfileActivity.class);
+                    getSupportFragmentManager().beginTransaction().replace(R.id.contentContainer,new ProfileFragment()).commit();
+
+
+                }
+                else if (position == 2) {
+                    Intent intent =new Intent(HomeActivity.this,PostActivity.class);
                     startActivity(intent);
+//                    getSupportFragmentManager().beginTransaction().replace(R.id.contentContainer,new PostFragment()).commit();
 
 
                 }

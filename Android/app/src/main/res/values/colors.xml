@@ -3,4 +3,7 @@
     <color name="colorPrimary">#BF5E27</color>
     <color name="colorPrimaryDark">#AC5523</color>
     <color name="colorAccent">#BF5E27</color>
+    <color name="btn_context_menu_normal">#BF5E27</color>
+    <color name="btn_context_menu_pressed">#BF5E27</color>
+
 </resources>
