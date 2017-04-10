@@ -37,7 +37,7 @@ public class ImageViewActivity extends AppCompatActivity {
             }
         });
         postlistview=(ListView)findViewById(R.id.image_listview);
-        load_posts();
+//        load_posts();
 
     }
     public void load_posts(){

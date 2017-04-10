@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".StartActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Transparent">
             <intent-filter>
@@ -32,6 +32,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent" />
         <activity
             android:name=".ProfileActivity"
             android:screenOrientation="portrait" />
@@ -54,7 +58,9 @@
         <activity
             android:name=".MainLoadActivity"
             android:label="@string/title_activity_main_load"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.SingupActivity" />
+        <activity android:name=".activity.ImageDetailsActivity"></activity>
     </application>
 
 </manifest>

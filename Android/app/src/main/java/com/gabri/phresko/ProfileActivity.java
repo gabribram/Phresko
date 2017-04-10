@@ -62,12 +62,7 @@ public class ProfileActivity extends AppCompatActivity {
         Favorites favorites2=new Favorites();
         favorites2.setTagname("SAVAGERY");
         favelist.add(favorites2);
-        Favorites favorites3=new Favorites();
-        favorites3.setTagname("POLITICS");
-        favelist.add(favorites3);
-        Favorites favorites4=new Favorites();
-        favorites4.setTagname("POPMEDIA");
-        favelist.add(favorites4);
+
 
 
         adapter = new FavAdapter(this, favelist);

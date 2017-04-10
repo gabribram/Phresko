@@ -63,6 +63,16 @@ public class FavAdapter extends BaseAdapter {
         }
         viewHolder.favenamne_textview.setText(favelist.get(position).getTagname());
         viewHolder.favimageview.setImageResource(R.drawable.savagery);
+        if (favelist.get(position).getTagname().equals("SPORTS")){
+            viewHolder.favimageview.setImageResource(R.drawable.sport);
+        }
+        if (favelist.get(position).getTagname().equals("POLITICS")){
+            viewHolder.favimageview.setImageResource(R.drawable.politics);
+        }
+        if (favelist.get(position).getTagname().equals("SAVAGERY")){
+            viewHolder.favimageview.setImageResource(R.drawable.savagery);
+        }
+
         return view;
     }
 

@@ -1,6 +1,7 @@
 package com.gabri.phresko.fragments;
 
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.gabri.phresko.HomeActivity;
@@ -28,7 +31,8 @@ import java.util.List;
  */
 public class ProfileFragment extends Fragment {
     ListView favorites_listview;
-    ImageButton home_imagebutton;
+    ImageButton home_imagebutton,contact_imagebutton,phresko_imagebutton,media_imagebutton;
+    ImageView profile_imageview;
     FavAdapter adapter;
     List<Favorites> favelist;
     View profile_view;
@@ -44,6 +48,48 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         profile_view=inflater.inflate(R.layout.fragment_profile, container, false);
         home_imagebutton=(ImageButton)profile_view.findViewById(R.id.home_imageButton);
+        contact_imagebutton=(ImageButton)profile_view.findViewById(R.id.contactus_imageButton);
+        phresko_imagebutton=(ImageButton)profile_view.findViewById(R.id.phresko_imageButton);
+        media_imagebutton=(ImageButton)profile_view.findViewById(R.id.media_imageButton);
+        profile_imageview=(ImageView)profile_view.findViewById(R.id.profile_imageView);
+        profile_imageview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.setContentView(R.layout.imaage_alert_layout);
+
+                final ImageView show_imageview=(ImageView) dialog.findViewById(R.id.show_imageView);
+                show_imageview.setImageResource(R.drawable.profileshow);
+                dialog.show();
+
+            }
+        });
+        phresko_imagebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.setContentView(R.layout.imaage_alert_layout);
+
+                final ImageView show_imageview=(ImageView) dialog.findViewById(R.id.show_imageView);
+                show_imageview.setImageResource(R.drawable.middleprofile);
+                dialog.show();
+            }
+        });
+        media_imagebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.setContentView(R.layout.imaage_alert_layout);
+
+                final ImageView show_imageview=(ImageView) dialog.findViewById(R.id.show_imageView);
+                show_imageview.setImageResource(R.drawable.mediaprofile);
+                dialog.show();
+
+            }
+        });
         home_imagebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,9 +101,23 @@ public class ProfileFragment extends Fragment {
         favorites_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Utils.setToPrefString(Constants.KEY_TAG,favelist.get(position).getTagname(),getActivity());
-                Intent intent=new Intent(getActivity(), ImageViewActivity.class);
-                startActivity(intent);
+
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.setContentView(R.layout.imaage_alert_layout);
+
+                final ImageView show_imageview=(ImageView) dialog.findViewById(R.id.show_imageView);
+                if (favelist.get(position).getTagname().equals("SPORTS")){
+                    show_imageview.setImageResource(R.drawable.sportprofile);
+                }
+                else if(favelist.get(position).getTagname().equals("POLITICS")){
+                    show_imageview.setImageResource(R.drawable.politicsprofile);
+                }
+                else if(favelist.get(position).getTagname().equals("SAVAGERY")){
+                    show_imageview.setImageResource(R.drawable.savayprofile);
+                }
+                dialog.show();
+
+
             }
         });
         return profile_view;
@@ -77,12 +137,7 @@ public class ProfileFragment extends Fragment {
         Favorites favorites2=new Favorites();
         favorites2.setTagname("SAVAGERY");
         favelist.add(favorites2);
-        Favorites favorites3=new Favorites();
-        favorites3.setTagname("POLITICS");
-        favelist.add(favorites3);
-        Favorites favorites4=new Favorites();
-        favorites4.setTagname("POPMEDIA");
-        favelist.add(favorites4);
+
 
 
         adapter = new FavAdapter(getActivity(), favelist);

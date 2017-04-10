@@ -10,8 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.gabri.phresko.R;
+import com.gabri.phresko.activity.ImageDetailsActivity;
 import com.gabri.phresko.activity.ImageViewActivity;
 import com.gabri.phresko.utils.Constants;
 import com.gabri.phresko.utils.Utils;
@@ -51,14 +53,14 @@ public class SelectImagesFragment extends Fragment {
         all_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), ImageViewActivity.class);
+                Intent intent=new Intent(getActivity(), ImageDetailsActivity.class);
                 startActivity(intent);
             }
         });
         hash_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), ImageViewActivity.class);
+                Intent intent=new Intent(getActivity(), ImageDetailsActivity.class);
                 startActivity(intent);
             }
         });

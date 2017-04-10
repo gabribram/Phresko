@@ -50,24 +50,26 @@
             android:orientation="horizontal">
 
             <ImageButton
+                android:id="@+id/sko_imageButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:srcCompat="@drawable/sko"
-                android:id="@+id/sko_imageButton"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:scaleType="centerInside"
                 android:background="@drawable/skobackground"
-                android:layout_margin="2dp" />
+                android:padding="30dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/sko" />
 
             <ImageButton
+                android:id="@+id/slides_imageButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:srcCompat="@drawable/slides"
-                android:id="@+id/slides_imageButton"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/slidebackground"
+                android:padding="50dp"
                 android:scaleType="centerInside"
-                android:layout_margin="2dp" />
+                app:srcCompat="@drawable/slides" />
 
         </LinearLayout>
 

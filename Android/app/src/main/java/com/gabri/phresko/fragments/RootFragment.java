@@ -43,44 +43,48 @@ public class RootFragment extends Fragment {
         sko_imagebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            if (buttonflag.equals("")){
-                sko_imagebutton.setBackgroundResource(R.drawable.skobutton_bg);
-                buttonflag="sko";
-                slide_imagebutton.setBackgroundResource(R.drawable.slidebutton_bg);
-            }
-            else if(buttonflag.equals("sko")){
-                sko_imagebutton.setBackgroundResource(R.drawable.skobutton_bg);
-                buttonflag="sko";
-                slide_imagebutton.setBackgroundResource(R.drawable.slidebutton_bg);
-            }
-            else if(buttonflag.equals("slide")){
+                if (buttonflag.equals("")){
 
-                sko_imagebutton.setBackgroundResource(R.drawable.skobutton_bg);
-                buttonflag="sko";
-                slide_imagebutton.setBackgroundResource(R.drawable.slidebutton_bg);
+                    sko_imagebutton.setBackgroundResource(R.drawable.skobutton_bg_click);
+                    buttonflag="sko";
+                    slide_imagebutton.setBackgroundResource(R.drawable.slidebutton_bg);
+                }
+                else if(buttonflag.equals("sko")){
+
+                    sko_imagebutton.setBackgroundResource(R.drawable.skobutton_bg_click);
+                    buttonflag="sko";
+                    slide_imagebutton.setBackgroundResource(R.drawable.slidebutton_bg);
+                }
+                else if(buttonflag.equals("slide")){
+
+                    sko_imagebutton.setBackgroundResource(R.drawable.skobutton_bg_click);
+                    buttonflag="sko";
+                    slide_imagebutton.setBackgroundResource(R.drawable.slidebutton_bg);
+
+                }
 
             }
-
-        }
         });
         slide_imagebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (buttonflag.equals("")){
-                    sko_imagebutton.setBackgroundResource(R.drawable.slidebutton_bg);
+
+                    sko_imagebutton.setBackgroundResource(R.drawable.skobutton_bg);
                     buttonflag="slide";
-                    slide_imagebutton.setBackgroundResource(R.drawable.skobutton_bg);
+                    slide_imagebutton.setBackgroundResource(R.drawable.slidebutton_bg_click);
                 }
                 else if(buttonflag.equals("sko")){
-                    sko_imagebutton.setBackgroundResource(R.drawable.slidebutton_bg);
+
+                    sko_imagebutton.setBackgroundResource(R.drawable.skobutton_bg);
                     buttonflag="slide";
-                    slide_imagebutton.setBackgroundResource(R.drawable.skobutton_bg);
+                    slide_imagebutton.setBackgroundResource(R.drawable.slidebutton_bg_click);
                 }
                 else if(buttonflag.equals("slide")){
 
-                    sko_imagebutton.setBackgroundResource(R.drawable.slidebutton_bg);
+                    sko_imagebutton.setBackgroundResource(R.drawable.skobutton_bg);
                     buttonflag="slide";
-                    slide_imagebutton.setBackgroundResource(R.drawable.skobutton_bg);
+                    slide_imagebutton.setBackgroundResource(R.drawable.slidebutton_bg_click);
 
                 }
             }
@@ -90,8 +94,22 @@ public class RootFragment extends Fragment {
         next_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Utils.setToPrefString(Constants.KEY_TAG_KIND,buttonflag,getActivity());
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.contentContainer,new MainTagFragment()).commit();
+
+                if (buttonflag.equals("sko")){
+
+                    Utils.setToPrefString(Constants.KEY_TAG_KIND,buttonflag,getActivity());
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.contentContainer,new SkoRootFragment()).commit();
+
+                }
+                else {
+
+                    Utils.setToPrefString(Constants.KEY_TAG_KIND,buttonflag,getActivity());
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.contentContainer,new MainTagFragment()).commit();
+
+                }
+
+
+
             }
         });
         return root_view;

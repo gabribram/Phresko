@@ -1,0 +1,80 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.gabri.phresko.fragments.SkoRootFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E5E5E5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorAccent"
+            android:id="@+id/top">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/logo"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imageView2"
+                android:scaleType="fitCenter" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/middle"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/top"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/every_imageButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/skobackground"
+                android:padding="30dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/everybody" />
+
+            <ImageButton
+                android:id="@+id/mature_imageButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/slidebackground"
+                android:cropToPadding="false"
+                android:padding="40dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/mature" />
+
+        </LinearLayout>
+
+        <Button
+            android:text="next"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/nextbutton_bg"
+            android:layout_below="@+id/middle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="43dp"
+            android:id="@+id/next_button"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+</FrameLayout>

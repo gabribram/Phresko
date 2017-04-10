@@ -149,12 +149,13 @@ public class SlideSubFragment extends Fragment {
             favorites3.setTagname("NFL");
             sublists.add(favorites3);
             Favorites favorites4=new Favorites();
-            favorites4.setTagname("Boxing/MMA");
+            favorites4.setTagname("Boxing");
             sublists.add(favorites4);
             adapter = new SlideSubTagAdapter(getActivity(), sublists);
             sub_listview.setAdapter(adapter);
         }
         else if(Utils.getFromPref(Constants.KEY_TAG,getActivity()).equals("Gatherings")){
+            sublists=new ArrayList<Favorites>();
             Favorites favorites=new Favorites();
             favorites.setTagname("Concerts");
             sublists.add(favorites);
@@ -252,16 +253,16 @@ public class SlideSubFragment extends Fragment {
         else if(Utils.getFromPref(Constants.KEY_TAG,getActivity()).equals("Nature")){
             sublists=new ArrayList<Favorites>();
             Favorites favorites=new Favorites();
-            favorites.setTagname("FOrrests");
+            favorites.setTagname("Forrests");
             sublists.add(favorites);
             Favorites favorites1=new Favorites();
             favorites1.setTagname("Water");
             sublists.add(favorites1);
             Favorites favorites2=new Favorites();
-            favorites2.setTagname("Plants");
+            favorites2.setTagname("Plant");
             sublists.add(favorites2);
             Favorites favorites3=new Favorites();
-            favorites3.setTagname("Sky/Mtns");
+            favorites3.setTagname("Sky");
             sublists.add(favorites3);
             adapter = new SlideSubTagAdapter(getActivity(), sublists);
             sub_listview.setAdapter(adapter);
@@ -297,13 +298,13 @@ public class SlideSubFragment extends Fragment {
         else if(Utils.getFromPref(Constants.KEY_TAG,getActivity()).equals("Animation")){
             sublists=new ArrayList<Favorites>();
             Favorites favorites=new Favorites();
-            favorites.setTagname("CGI/Graphics");
+            favorites.setTagname("Graphics");
             sublists.add(favorites);
             Favorites favorites1=new Favorites();
-            favorites1.setTagname("Cptr");
+            favorites1.setTagname("Capture");
             sublists.add(favorites1);
             Favorites favorites2=new Favorites();
-            favorites2.setTagname("By hand");
+            favorites2.setTagname("");
             sublists.add(favorites2);
             adapter = new SlideSubTagAdapter(getActivity(), sublists);
             sub_listview.setAdapter(adapter);

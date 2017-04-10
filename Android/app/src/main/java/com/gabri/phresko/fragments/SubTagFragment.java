@@ -90,16 +90,16 @@ public class SubTagFragment extends Fragment {
 
 
             Favorites favorites=new Favorites();
-            favorites.setTagname("Trump/Pence");
+            favorites.setTagname("Trump");
             sublists.add(favorites);
             Favorites favorites1=new Favorites();
-            favorites1.setTagname("Obama/Biden");
+            favorites1.setTagname("Obama");
             sublists.add(favorites1);
             Favorites favorites2=new Favorites();
             favorites2.setTagname("Republicans");
             sublists.add(favorites2);
             Favorites favorites3=new Favorites();
-            favorites3.setTagname("Democrats");
+            favorites3.setTagname("Democrat");
             sublists.add(favorites3);
             adapter = new SubTagAdapter(getActivity(), sublists);
             sub_listview.setAdapter(adapter);
@@ -112,14 +112,11 @@ public class SubTagFragment extends Fragment {
             Favorites favorites1=new Favorites();
             favorites1.setTagname("MLB");
             sublists.add(favorites1);
-            Favorites favorites2=new Favorites();
-            favorites2.setTagname("NFL");
-            sublists.add(favorites2);
             Favorites favorites3=new Favorites();
             favorites3.setTagname("Soccer");
             sublists.add(favorites3);
             Favorites favorites4=new Favorites();
-            favorites4.setTagname("Boxing/MMA");
+            favorites4.setTagname("Boxing");
             sublists.add(favorites4);
             adapter = new SubTagAdapter(getActivity(), sublists);
             sub_listview.setAdapter(adapter);
@@ -153,18 +150,19 @@ public class SubTagFragment extends Fragment {
             adapter = new SubTagAdapter(getActivity(), sublists);
             sub_listview.setAdapter(adapter);
         }
-        else if(Utils.getFromPref(Constants.KEY_TAG,getActivity()).equals("PETTY")){
+        else if(Utils.getFromPref(Constants.KEY_TAG,getActivity()).equals("Petty")){
             sublists=new ArrayList<Favorites>();
             Favorites favorites=new Favorites();
             favorites.setTagname("Common");
             sublists.add(favorites);
             Favorites favorites1=new Favorites();
-            favorites1.setTagname("Super-Petty");
+            favorites1.setTagname("Super Petty");
             sublists.add(favorites1);
             adapter = new SubTagAdapter(getActivity(), sublists);
             sub_listview.setAdapter(adapter);
         }
-        else if(Utils.getFromPref(Constants.KEY_TAG,getActivity()).equals("ADULT")){
+        else if(Utils.getFromPref(Constants.KEY_TAG,getActivity()).equals("Adult")){
+            sublists=new ArrayList<Favorites>();
             Favorites favorites=new Favorites();
             favorites.setTagname("Jokes");
             sublists.add(favorites);

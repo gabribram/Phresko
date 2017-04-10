@@ -5,91 +5,126 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="#BF5E27"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.gabri.phresko.MainActivity">
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/logo"
-        android:id="@+id/imageView"
-        android:scaleType="fitCenter"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/logo" />
 
     <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/layout_bg"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="70dp"
-        android:id="@+id/editText"
+        android:background="@drawable/layout_bg"
+        android:ems="10"
+        android:gravity="center_vertical|center"
         android:hint="uername"
+        android:inputType="textPersonName"
         android:singleLine="true"
         android:textColor="@android:color/darker_gray"
         android:textColorHint="@android:color/darker_gray"
-        android:typeface="serif"
-        android:gravity="center_vertical|center"
-        android:layout_marginLeft="50dp" />
+        android:typeface="serif" />
 
     <EditText
+        android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
-        android:hint="password"
-        android:singleLine="true"
-        android:background="@drawable/layout_bg"
-        android:textColor="@android:color/darker_gray"
-        android:textColorHint="@android:color/darker_gray"
-        android:gravity="center"
-        android:layout_alignRight="@+id/editText"
         android:layout_alignEnd="@+id/editText"
-        android:layout_marginTop="10dp" />
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layout_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColor="@android:color/darker_gray"
+        android:textColorHint="@android:color/darker_gray" />
 
     <TextView
-        android:text="Forgot Password?"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/signin_button"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
-        android:id="@+id/textView"
-        android:typeface="serif"
-        android:textColor="@android:color/white" />
+        android:layout_marginTop="20dp"
+        android:text="Forgot Password?"
+        android:textColor="@android:color/white"
+        android:typeface="serif" />
 
     <TextView
-        android:text="Create an account?"
+        android:id="@+id/create_accouttextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/textView"
+        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/textView"
-        android:id="@+id/textView2"
+        android:text="Create an account?"
         android:textColor="@android:color/white" />
 
     <Button
-        android:text="sign in"
+        android:id="@+id/signin_button"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:id="@+id/signin_button"
-        android:background="@drawable/signbutton_bg"
-        android:layout_below="@+id/editText2"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_alignRight="@+id/editText2"
         android:layout_alignEnd="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_below="@+id/editText2"
         android:layout_marginTop="10dp"
+        android:background="@drawable/signbutton_bg"
+        android:text="sign in"
         android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/or" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/twitter" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/imageButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/google" />
 </RelativeLayout>
